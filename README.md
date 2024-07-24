@@ -9,15 +9,17 @@ ClickUp Track is a powerful Chrome extension designed to enhance your productivi
 4. Done, extension is ready to use!
 
 ## ⚡️Features:
-➡️Quick Time Tracking: Start and stop time tracking effortlessly with a simple click.
-➡️Task Switching: Easily switch between tasks without disrupting your workflow.
-➡️Custom Task Periods: Choose specific periods for tasks to tailor your time tracking.
-➡️Progress Monitoring: See real-time updates on how much time you’ve tracked.
-➡️Goal Setting: Set and view your target tracked time to stay on top of your goals.
-➡️Overtime Tracking: Monitor and manage overtime to prevent burnout.
-➡️User-Friendly Interface: Enjoy a clean, intuitive design that makes time tracking easy and efficient.
-➡️Open Source: All code is open source, secure and transparent
-➡️Client-Based Extension: It operates entirely on the client side, with no backend server required, ensuring your data stays private and local. Enjoy a secure and transparent experience with complete control over your usage using your API ClickUp Key.
+- ➡️Quick Time Tracking: Start and stop time tracking effortlessly with a simple click.
+- ➡️Task Switching: Easily switch between tasks without disrupting your workflow.
+- ➡️Custom Task Periods: Choose specific periods for tasks to tailor your time tracking.
+- ➡️Progress Monitoring: See real-time updates on how much time you’ve tracked.
+- ➡️Goal Setting: Set and view your target tracked time to stay on top of your goals.
+- ➡️Overtime Tracking: Monitor and manage overtime to prevent burnout.
+- ➡️User-Friendly Interface: Enjoy a clean, intuitive design that makes time tracking easy and efficient.
+- ➡️Open Source: All code is open source, secure and transparent
+- ➡️Client-Based Extension: It operates entirely on the client side, with no backend server required, ensuring your data stays private and local.
+
+- Enjoy a secure and transparent experience with complete control over your usage using your API ClickUp Key.
 ➡️Seamless Integration: Works directly within your Chrome browser for convenient access.
 Take control of your time management with ClickUp Track and boost your productivity today!
 
@@ -30,12 +32,11 @@ GitHub: https://github.com/DanRotaru/clickup-track
 Created with ❤️ by DanRotaru: https://dan13.me/
 
 ## Screenshots:
-[Image](/images/Page.jpg)
-[Image](/images/Page-1.jpg)
-[Image](/images/Page-2.jpg)
-[Image](/images/Page-3.jpg)
-[Image](/images/Page-4.jpg)
-[Image](/images/Page-5.jpg)
+![Image](/images/Page-1.jpg)
+![Image](/images/Page-2.jpg)
+![Image](/images/Page-3.jpg)
+![Image](/images/Page-4.jpg)
+![Image](/images/Page-5.jpg)
 
 
 ## Recommended IDE Setup
