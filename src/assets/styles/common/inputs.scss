@@ -1,0 +1,24 @@
+.input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font: inherit;
+  border: 1px solid rgb(209 213 219);
+  box-shadow: 0 0 0 1px transparent;
+  border-radius: 6px;
+  background: #fff;
+  outline: none;
+  transition: .2s ease;
+  transition-property: box-shadow, background-color;
+  -webkit-appearance: none;
+
+  &[type="number"]::-webkit-outer-spin-button,
+  &[type="number"]::-webkit-inner-spin-button {
+    display: none;
+    -webkit-appearance: none;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 1px #7383EF;
+  }
+}

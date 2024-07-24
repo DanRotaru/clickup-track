@@ -1,0 +1,28 @@
+.nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1003;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  margin-bottom: 20px;
+  padding: 10px 5px 10px 10px;
+
+  background: rgb(255 255 255 / 80%);
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(10px);
+
+  &-logo {
+    width:auto;
+    height:36px;
+  }
+
+  &-flex {
+    display: flex;
+    align-items: center;
+  }
+}

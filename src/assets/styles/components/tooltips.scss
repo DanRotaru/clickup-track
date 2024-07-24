@@ -1,0 +1,165 @@
+/* TOOLTIP */
+[tooltip] {
+  position: relative;
+  --tooltip-bg: #1B1C1F;
+  --tooltip-color: #fff;
+
+  &:before,
+  &:after {
+    position: absolute;
+    display: none;
+    //opacity: 0;
+    font-size: 12px;
+    line-height: 1;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  &:before {
+    content: '';
+    border: 7px solid transparent;
+    z-index: 1001;
+  }
+
+  &:after {
+    //&#10; - new line
+    content: attr(tooltip);
+    text-align: center;
+    //min-width: 90px;
+    //white-space: nowrap;
+    white-space: pre;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 8px;
+    border-radius: 6px;
+    box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.35);
+    background: var(--tooltip-bg);
+    color: var(--tooltip-color);
+    z-index: 1000;
+  }
+
+  &:hover:before,
+  &:hover:after {
+    display: block;
+  }
+}
+
+[tooltip='']::before,
+[tooltip='']::after {
+  display: none !important;
+}
+
+/* FLOW: UP */
+[tooltip]:not([flow])::before,
+[tooltip][flow^="up"]::before {
+  bottom: calc(100% + 2px);
+  border-bottom-width: 0;
+  border-top-color: var(--tooltip-bg);
+}
+
+[tooltip]:not([flow])::after,
+[tooltip][flow^="up"]::after {
+  bottom: calc(100% + 8px);
+}
+
+[tooltip]:not([flow])::before,
+[tooltip]:not([flow])::after,
+[tooltip][flow^="up"]::before,
+[tooltip][flow^="up"]::after {
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+[tooltip][flow-align="left"] {
+  &:before,
+  &:after {
+    left: 0;
+    transform: none;
+  }
+
+  &:before {
+    left: 7px;
+  }
+}
+
+/* FLOW: DOWN */
+[tooltip][flow^="down"]::before {
+  top: 100%;
+  border-top-width: 0;
+  border-bottom-color: var(--tooltip-bg);
+  margin-top: 1px;
+}
+
+[tooltip][flow^="down"]::after {
+  top: calc(100% + 8px);
+}
+
+[tooltip][flow^="down"]::before,
+[tooltip][flow^="down"]::after {
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+/* FLOW: LEFT */
+[tooltip][flow^="left"]::before {
+  top: 50%;
+  border-right-width: 0;
+  border-left-color: var(--tooltip-bg);
+  left: -8px;
+  transform: translate(0, -50%);
+}
+
+[tooltip][flow^="left"]::after {
+  top: 50%;
+  right: calc(100% + 8px);
+  transform: translate(0, -50%);
+}
+
+/* FLOW: RIGHT */
+[tooltip][flow^="right"]::before {
+  top: 50%;
+  border-left-width: 0;
+  border-right-color: var(--tooltip-bg);
+  right: -8px;
+  transform: translate(0, -50%);
+}
+
+[tooltip][flow^="right"]::after {
+  top: 50%;
+  left: calc(100% + 8px);
+  transform: translate(0, -50%);
+}
+
+///* KEYFRAMES */
+//@keyframes tooltips-vert {
+//  to {
+//    opacity: 1;
+//    transform: translate(-50%, 0);
+//  }
+//}
+//
+//@keyframes tooltips-horiz {
+//  to {
+//    opacity: 1;
+//    transform: translate(0, -50%);
+//  }
+//}
+
+/* FX All The Things */
+//[tooltip]:not([flow]):hover::before,
+//[tooltip]:not([flow]):hover::after,
+//[tooltip][flow^="up"]:hover::before,
+//[tooltip][flow^="up"]:hover::after,
+//[tooltip][flow^="down"]:hover::before,
+//[tooltip][flow^="down"]:hover::after {
+//  animation: tooltips-vert 200ms ease-out forwards;
+//}
+//
+//[tooltip][flow^="left"]:hover::before,
+//[tooltip][flow^="left"]:hover::after,
+//[tooltip][flow^="right"]:hover::before,
+//[tooltip][flow^="right"]:hover::after {
+//  animation: tooltips-horiz 300ms ease-out forwards;
+//}
+
+/* TOOLTIP */

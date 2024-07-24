@@ -1,0 +1,92 @@
+/**
+ * Author: DanRotaru
+ *
+ * Website: https://danrotaru.github.io/
+ *
+ * License: Free to use
+ */
+
+body {
+  --scrollbar-color: #F7F8F9;
+  --scrollbar-thumb-color: #8B8B8B;
+  --scrollbar-thumb-hover-color: #606060;
+
+  --scrollbar-dark-color: #111729;
+  --scrollbar-dark-thumb-color: #9EA0A1;
+  --scrollbar-dark-thumb-hover-color: #a9abab;
+
+  &::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    background: var(--scrollbar-color);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color);
+    border-radius: 10px;
+    border: 3px solid transparent;
+    background-clip: padding-box;
+  }
+
+  &::-webkit-scrollbar-button {
+    width: 15px;
+    height: 15px;
+    border: 3px solid transparent;
+    background-clip: padding-box;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &::-webkit-scrollbar-button:vertical:decrement {
+    background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 9 9\'%3E%3Cpath fill=\'%238b8b8b\' d=\'m5.7 1.7 3.1 4.2c.6.9-.1 2.1-1.2 2.1H1.4C.3 8-.4 6.8.2 5.9l3.1-4.2c.5-.9 1.9-.9 2.4 0z\' /%3E%3C/svg%3E');
+  }
+
+  &::-webkit-scrollbar-button:vertical:increment {
+    background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 9 9\'%3E%3Cpath fill=\'%238b8b8b\' d=\'m5.7 7.3 3.1-4.2C9.4 2.2 8.7 1 7.6 1H1.4C.3 1-.4 2.2.2 3.1l3.1 4.2c.5.9 1.9.9 2.4 0z\' /%3E%3C/svg%3E');
+  }
+
+  &::-webkit-scrollbar-button:vertical:hover:decrement {
+    background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 9 9\'%3E%3Cpath fill=\'%23606060\' d=\'m5.7 1.7 3.1 4.2c.6.9-.1 2.1-1.2 2.1H1.4C.3 8-.4 6.8.2 5.9l3.1-4.2c.5-.9 1.9-.9 2.4 0z\' /%3E%3C/svg%3E');
+  }
+
+  &::-webkit-scrollbar-button:vertical:hover:increment {
+    background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 9 9\'%3E%3Cpath fill=\'%23606060\' d=\'m5.7 7.3 3.1-4.2C9.4 2.2 8.7 1 7.6 1H1.4C.3 1-.4 2.2.2 3.1l3.1 4.2c.5.9 1.9.9 2.4 0z\' /%3E%3C/svg%3E');
+  }
+
+  &::-webkit-scrollbar-button:horizontal:decrement {
+    background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 9 9\'%3E%3Cpath fill=\'%238b8b8b\' d=\'M1.7 3.3 5.9.2C6.8-.4 8 .3 8 1.4v6.2c0 1.1-1.2 1.8-2.1 1.2L1.7 5.7c-.9-.5-.9-1.9 0-2.4z\' /%3E%3C/svg%3E');
+  }
+
+  &::-webkit-scrollbar-button:horizontal:increment {
+    background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 9 9\'%3E%3Cpath fill=\'%238b8b8b\' d=\'M7.3 3.3 3.1.2C2.2-.4 1 .3 1 1.4v6.2c0 1.1 1.2 1.8 2.1 1.2l4.2-3.1c.9-.5.9-1.9 0-2.4z\' /%3E%3C/svg%3E');
+  }
+
+  &::-webkit-scrollbar-button:horizontal:hover:decrement {
+    background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 9 9\'%3E%3Cpath fill=\'%23606060\' d=\'M1.7 3.3 5.9.2C6.8-.4 8 .3 8 1.4v6.2c0 1.1-1.2 1.8-2.1 1.2L1.7 5.7c-.9-.5-.9-1.9 0-2.4z\' /%3E%3C/svg%3E');
+  }
+
+  &::-webkit-scrollbar-button:horizontal:hover:increment {
+    background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 9 9\'%3E%3Cpath fill=\'%23606060\' d=\'M7.3 3.3 3.1.2C2.2-.4 1 .3 1 1.4v6.2c0 1.1 1.2 1.8 2.1 1.2l4.2-3.1c.9-.5.9-1.9 0-2.4z\' /%3E%3C/svg%3E');
+  }
+
+  &::-webkit-scrollbar-thumb:hover,
+  &::-webkit-scrollbar-thumb:active {
+    background-color: var(--scrollbar-thumb-hover-color);
+  }
+
+  &.dark {
+    &::-webkit-scrollbar {
+      background: var(--scrollbar-dark-color);
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--scrollbar-dark-thumb-color);
+    }
+
+    &::-webkit-scrollbar-thumb:hover,
+    &::-webkit-scrollbar-thumb:active {
+      background-color: var(--scrollbar-dark-thumb-hover-color);
+    }
+  }
+}

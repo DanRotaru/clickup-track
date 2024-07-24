@@ -1,0 +1,204 @@
+.dp {
+  margin-bottom: 30px;
+
+  &-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-input {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    padding: 5px 5px 5px 8px;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: .2s ease background-color;
+
+    &:after {
+      content: '';
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='currentColor' d='M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z'/%3E%3C/svg%3E");
+      width: 20px;
+      height: 20px;
+    }
+
+    &:hover {
+      background-color: #eee;
+    }
+  }
+
+  &__main {
+    width: fit-content;
+    max-width: 100%;
+    margin-top: 5px;
+
+    @media (min-width: 422px) {
+      max-width: 320px;
+    }
+
+    @media (max-width: 422px) {
+      width: 100%;
+    }
+  }
+
+  &-hours {
+    position: relative;
+    top: -2px;
+    padding: 3px 4px;
+    border-radius: 6px;
+    font-size: 12px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+  }
+
+  &__menu {
+    --dp-arrow-left: 25px !important;
+    --dp-menu-padding: 8px 8px 0;
+    --dp-border-radius: 12px;
+    --dp-button-icon-height: 15px;
+    --dp-primary-color: #6985FF;
+    --dp-icon-color: #6a6a6a;
+    --dp-hover-icon-color: #000;
+    --dp-hover-color: #f3f4f6;
+    --dp-cell-size: 32px;
+    --dp-cell-border-radius: 8px;
+    --dp-month-year-row-button-size: 32px;
+
+    margin-top: 5px;
+    box-shadow:
+      0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.028),
+      0 12.5px 10px rgba(0, 0, 0, 0.035),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.042),
+      0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+      0 100px 80px rgba(0, 0, 0, 0.07);
+
+    .dp--overlay-absolute {
+      border-radius: var(--dp-border-radius);
+    }
+
+    .dp__arrow_top {
+      top: 5px;
+    }
+
+    .dp__cell_inner {
+      @media(max-width: 430px) {
+        width: initial;
+      }
+
+      &.dp__range_start.dp__range_end {
+        border-radius: var(--dp-cell-border-radius);
+      }
+    }
+
+    .dp__today {
+      border-color: transparent;
+
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        width: 11px;
+        height: 0;
+        border-bottom: 3px solid var(--dp-primary-color);
+        border-radius: 5px;
+      }
+    }
+
+    .dp__range_between {
+      border-radius: 0;
+    }
+
+    .dp__inner_nav,
+    .dp__month_year_select {
+      border-radius: 6px;
+    }
+
+    .dp--arrow-btn-nav {
+      padding: 0;
+    }
+
+    .dp__calendar_header_separator {
+      display: none;
+    }
+
+    .dp__menu_content_wrapper {
+      height: 100%;
+      flex-direction: row-reverse !important;
+
+      @media (max-width: 600px) {
+        --dp-menu-width: 100% !important;
+      }
+
+      @media (max-width: 422px) {
+        flex-direction: column-reverse !important;
+      }
+
+      .dp--preset-dates {
+        align-self: start;
+        flex-wrap: wrap;
+        height: 100%;
+        padding: 8px;
+        max-width: unset !important;
+        border-inline-end: unset;
+      }
+    }
+
+    .dp__instance_calendar {
+      border-right: 1px solid #E5E7EB;
+
+      @media (max-width: 422px) {
+        border-right: 0;
+      }
+    }
+
+    .dp--preset-range {
+      padding: 8px 12px;
+      border-radius: 5px;
+
+      @media (max-width: 600px) {
+        margin: 0;
+      }
+
+      @media (max-width: 422px) {
+        width: 50%;
+
+        &:last-of-type {
+          width: 100%;
+        }
+      }
+
+      &:hover {
+        background-color: #f3f4f6;
+      }
+    }
+  }
+
+  &__external {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 0;
+    cursor: pointer;
+    opacity: .6;
+    transition: .2s ease opacity;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &--menu-wrapper {
+    left: 0 !important;
+    z-index: 10;
+  }
+}
+

@@ -1,0 +1,175 @@
+body {
+  background-color: #F7F8F9;
+}
+
+body.dark {
+  &:not(:has(.login)) {
+    background-color: #111729;
+    color: #fff;
+  }
+
+  .nav {
+    background: rgb(26 33 51 / 70%);
+    color: #fff;
+
+    &-logo {
+      .path-text {
+        fill: #fff;
+      }
+    }
+
+    .user {
+      &:hover {
+        background-color: rgb(255 255 255 / 10%);
+      }
+
+      &-dropdown {
+        background-color: #242d42;
+
+        &:before {
+          border-bottom-color: #242d42;
+        }
+
+        a {
+          color: #fff;
+
+          &:hover {
+            background-color: #303b56;
+          }
+        }
+      }
+    }
+  }
+
+  .dp {
+    &__theme_light {
+      --dp-background-color: #1d2439;
+      --dp-text-color: #fff;
+      --dp-menu-border-color: #333a56;
+      --dp-range-between-dates-background-color: #333a56;
+      --dp-range-between-dates-text-color: #fff;
+      --dp-range-between-border-color: #333a56;
+
+      --dp-hover-color: #333a56;
+      --dp-hover-text-color: #fff;
+    }
+
+    &-hours {
+      border-color: #364153;
+      background-color: #1A2133;
+    }
+
+    &-input {
+      &:hover {
+        background-color: #333a56;
+        color: #fff;
+      }
+
+      &:after {
+        filter: invert(1);
+      }
+    }
+
+    &__external {
+      color: #fff;
+    }
+
+    &__menu {
+      .dp__instance_calendar {
+        border-color: #333a56;
+      }
+
+      .dp--preset-range:hover {
+        background-color: #333a56;
+        color: #fff;
+      }
+    }
+
+    &__icon {
+      stroke: #fff;
+      fill: #fff;
+    }
+  }
+
+  .task {
+    background-color: #1A2133;
+    border-color: #232a40;
+
+    &:hover {
+      border-color: #364153;
+    }
+
+    &__name,
+    &__location span a {
+      color: #f0f0f0;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    &__billable.not {
+      background-color: #727272;
+    }
+  }
+
+  .modal {
+    &-dialog {
+      border: 1px solid rgb(255 255 255 / 10%);
+    }
+
+    &-dialog,
+    &-body {
+      background-color: #111729;
+      color: #fff;
+    }
+
+    &-title {
+      border-color: #282f46;
+      color: #fff;
+    }
+
+    .option {
+      &__title {
+        color: #fff;
+      }
+
+      &-input {
+        select {
+          background-color: #222b45;
+          border-color: #333a56;
+          box-shadow: none;
+          color: #fff;
+        }
+
+        .keyboard-key {
+          color: #fff;
+          background-color: #222b45;
+          border-color: #333a56;
+          box-shadow: none;
+        }
+      }
+    }
+
+    .options-github,
+    .options-github:hover {
+      color: #fff;
+    }
+
+    .select-options {
+      background-color: #222b45;
+
+      &__bg {
+        background-color: #4d5a81;
+      }
+    }
+  }
+
+  [tooltip] {
+    --tooltip-bg: #333a56;
+  }
+
+  .skeleton {
+    background: #3e4355;
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "ClickUp Track",
+  "description": "ClickUp Track is a Chrome extension that boosts productivity by integrating time tracking directly into your ClickUp workflow.",
+  "version": "1.0.0",
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "action": {
+    "default_popup": "dist/index.html",
+    "default_icon": {
+      "16": "icons/16.png",
+      "48": "icons/48.png",
+      "128": "icons/128.png"
+    }
+  },
+  "options_page": "dist/index.html",
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+C"
+      }
+    }
+  },
+  "background": {
+    "service_worker": "sw.js",
+    "type": "module"
+  },
+  "permissions": ["alarms", "windows", "storage"],
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAs+7+rOuDIKcO1+IiXJAjgttjO7QrMsHOurSzm1SoQCJ2vquddBw31UynA7ZGsEoF+E/wd07Xa6euZzO4Ma01lzooYPlkwmo7oQgER+/rG58VOCk9x988DsOT9ap5Sj9jH6P0uEQxTNfGYlreWsp24j1VChAfgj2MZI3vvlK5lE1X0hegeWguFskT9gEOXqmE/8osgHKrY5MI2KlVYAzdvTC00pn/lIeMndYhXTLFTlF26RgNVF0cUrjq5vyOEqsQW2ipER2z/cffPM7goqHPHfL3t70RoycoJ1InYcVanC34unmYjmTJDReg9qxIxSPtPwvA2Zp1wJQRDbnl2L3TZQIDAQAB"
+}

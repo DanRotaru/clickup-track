@@ -1,0 +1,48 @@
+.select-options {
+  $self: &;
+  position: relative;
+  display: flex;
+  width: 100%;
+  border-radius: 9999px;
+  background-color: #EEEEF3;
+  padding: 5px;
+
+  &-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 5px;
+    font-size: 13px;
+    cursor: pointer;
+    z-index: 1;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    width: calc(50% - 5px);
+    height: calc(100% - 10px);
+    z-index: 0;
+    border-radius: 9999px;
+    border-color: #ddd;
+    background-color: #fff;
+    box-shadow: rgba(6, 5, 50, 0.19) 0 6px 20px;
+    transition: .2s ease transform;
+  }
+
+  &:has(.select-options-item:last-of-type input[type="radio"]:checked) {
+    .select-options__bg {
+      transform: translateX(100%);
+    }
+  }
+}

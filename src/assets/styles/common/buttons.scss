@@ -1,0 +1,35 @@
+.btn {
+  $self: &;
+  padding: 3px 10px;
+  font: inherit;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #d7dee7;
+  box-shadow: 0 1px rgba(0, 0, 0, 0.05);
+  transition: .2s ease;
+  transition-property: background-color, box-shadow;
+
+  &:hover {
+    background-color: #f9f9f9;
+  }
+
+  &:active {
+    background-color: #ececec;
+  }
+
+  &-group {
+    #{$self} {
+      border-radius: 0;
+      border-right-color: transparent;
+
+      &:first-of-type {
+        border-radius: 6px 0 0 6px;
+      }
+
+      &:last-of-type {
+        border-radius: 0 6px 6px 0;
+        border-right-color: #d7dee7;
+      }
+    }
+  }
+}

@@ -1,0 +1,140 @@
+.options {
+  position: relative;
+
+  .option {
+    width: 100%;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+      text-align: center;
+    }
+
+    &--flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    &__title {
+      color: #34393f;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    &-input {
+      position: relative;
+      width: 100%;
+
+      &-variants {
+        position: absolute;
+        top: 50%;
+        right: 7px;
+        transform: translateY(-50%);
+      }
+
+      select {
+        width: 100%;
+        border: 1px solid #ccc;
+        box-shadow: 0 1px #0000000d, 0 0 0 2px #fff inset;
+        border-radius: 5px;
+        padding: 6px;
+        outline: none;
+        font: inherit;
+        background-color: #fff;
+        transition: .2s ease;
+        transition-property: background-color, box-shadow;
+
+        &:hover {
+          background-color: #f9f9f9;
+          box-shadow: 0 1px #0000000d;
+        }
+
+        &:active,
+        &:focus {
+          border-color: #858585;
+          background-color: #fff;
+        }
+      }
+
+      .keyboard {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+
+        &-key {
+          width: 40px;
+          color: #333;
+          background-color: #fff;
+          border: 1px solid #ccc;
+          box-shadow: 0 1px #0003, 0 0 0 2px #fff inset;
+          border-radius: 4px;
+          text-align: center;
+          font-size: 12px;
+          padding: 2px 0;
+        }
+      }
+    }
+
+    &__hint {
+      margin-top: 5px;
+      font-size: 12px;
+      opacity: .8;
+    }
+
+    &__by {
+      font-size: 13px;
+      color: inherit;
+      text-decoration: none;
+      opacity: .6;
+      transition: .2s ease opacity;
+
+      span {
+        display: inline-block;
+        font-family: sans-serif;
+      }
+
+      &:hover {
+        opacity: 1;
+
+        span {
+          animation: pulse alternate ease-in-out .4s infinite;
+
+          @keyframes pulse {
+            0% {
+              transform: scale(1)
+            }
+
+            to {
+              transform: scale(1.25)
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-github {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    color: #000;
+    line-height: 0;
+    opacity: .7;
+    transition: .2s ease opacity;
+
+    &:hover {
+      color: #000;
+      opacity: 1;
+    }
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
