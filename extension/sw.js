@@ -96,13 +96,14 @@ async function main() {
 
   if (!user?.token || !user?.teamId || !user?.trackHours) {
     console.log('No token, teamId or user track hours.');
+    await setBadgeText();
     return;
   }
 
   API.token = user.token;
   API.teamId = user.teamId;
 
-  console.log(user);
+  // console.log(user);
 
   try {
     const todayTimeEntries = await API.getTodayTimeEntries();
@@ -148,7 +149,7 @@ async function main() {
     await chrome.action.setTitle({title: badgeTitle});
   } catch (error) {
     await setBadgeText();
-    console.log('Error:', error);
+    console.error('Error:', error);
   }
 }
 
@@ -164,7 +165,7 @@ chrome.alarms.create('get-track-progress', {periodInMinutes: 1});
 
 chrome.alarms.onAlarm.addListener(async alarm => {
   if (alarm.name === 'get-track-progress') {
-    console.log('Get track progress');
+    // console.log('Get track progress');
     await main();
   }
 });
