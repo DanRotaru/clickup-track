@@ -25,11 +25,24 @@
                 flow="right">{{ getTime(totalTasksTime) }}</span>
         </div>
 
-        <button class="dp__external" tooltip="Open in window" flow="left" @click="openInNewWindow" v-if="showExternal">
-          <svg>
-            <use xlink:href="#svg-external"/>
-          </svg>
-        </button>
+        <div class="dp-icons">
+          <button class="dp__external" tooltip="Open in window" flow="left" @click="openInNewWindow" v-if="showExternal">
+            <svg>
+              <use xlink:href="#svg-external"/>
+            </svg>
+          </button>
+
+          <button class="dp__external"
+                  tooltip="Update Tasks"
+                  flow="left"
+                  @click="getTasksEntries(true);getCurrentTaskEntry()"
+                  :disabled="loadingSkeletonTasks">
+            <svg>
+              <use xlink:href="#svg-reload"/>
+            </svg>
+          </button>
+        </div>
+
       </div>
 
 
@@ -222,8 +235,8 @@ const updateDatePicker = async () => {
   }
 };
 
-const getTasksEntries = async (emptyCurrentTasks = false) => {
-  loadingSkeletonTasks.value = true;
+const getTasksEntries = async (emptyCurrentTasks = false, hideSkeletonLoading = false) => {
+  loadingSkeletonTasks.value = !hideSkeletonLoading;
 
   const res = await getTimeEntries({
     teamId: user.value.teamId,
@@ -466,7 +479,10 @@ const hideModal = () => {
   ]);
 
   const FETCH_CURRENT_TASK_INTERVAL = 30 * 1000; // in seconds
-  setInterval(getCurrentTaskEntry, FETCH_CURRENT_TASK_INTERVAL);
+  setInterval(() => {
+    getTasksEntries(false, true);
+    getCurrentTaskEntry();
+  }, FETCH_CURRENT_TASK_INTERVAL);
 })();
 
 const toggleExpansion = (group) => {
